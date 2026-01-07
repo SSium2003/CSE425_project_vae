@@ -355,7 +355,7 @@ if __name__ == "__main__":
     print(f"Loaded {len(results_df)} results")
     
     # Load features
-    from clustering_advanced import load_all_features
+    from clustering_medium import load_all_features
     features_dict = load_all_features()
     
     # Genre names

@@ -10,7 +10,7 @@ from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
 from sklearn.decomposition import PCA
 import pickle
 
-from clustering import evaluate_clustering, cluster_purity
+from clustering_easy import evaluate_clustering, cluster_purity
 
 
 def load_all_features():

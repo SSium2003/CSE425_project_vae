@@ -17,7 +17,7 @@ try:
     from dataset import FMADataset, normalize_features
     from vae import VAE, vae_loss
     from train import VAETrainer, prepare_dataloader
-    from clustering import ClusteringPipeline, compare_methods
+    from clustering_easy import ClusteringPipeline, compare_methods
     from visualize import plot_tsne
     print("✓ All imports successful")
 except Exception as e:

@@ -1,8 +1,3 @@
-"""
-Train Convolutional VAE on MFCC spectrograms
-Better for capturing temporal structure in audio
-"""
-
 import numpy as np
 import torch
 import torch.optim as optim
@@ -11,6 +6,9 @@ import librosa
 from pathlib import Path
 from tqdm import tqdm
 import pickle
+import matplotlib
+matplotlib.use('Agg')  # Use a non-interactive backend (good for script-based execution)
+import matplotlib.pyplot as plt
 
 from vae import ConvVAE, vae_loss
 from train import VAETrainer
@@ -151,7 +149,7 @@ if __name__ == "__main__":
     
     # Extract spectrograms
     spectrograms, labels, track_ids = extract_mfcc_spectrograms(
-        data_path='./data',
+        data_path='F:/CSE425/fma_small',  # Set your correct path here
         max_samples=600,  # Per genre
         n_mfcc=20,
         max_frames=128
